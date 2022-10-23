@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react";
 const Layout = ({ children }) => {
   return (
     <Box>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>{children}</main>
       <Footer />
     </Box>
