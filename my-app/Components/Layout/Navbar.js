@@ -39,7 +39,6 @@ const Navbar = () => {
           icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
           onClick={toggleColorMode}
         />
-
         {/* <Button onClick={toggleColorMode}>Change bg</Button> */}
       </Box>
     </Flex>

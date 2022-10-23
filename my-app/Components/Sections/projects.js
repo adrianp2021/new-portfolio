@@ -87,6 +87,7 @@ const Projects = () => {
                         href={project.githubRepo}
                         target="_blank"
                         rel="noreferrer"
+                        aria-label="github"
                       >
                         <Icon viewBox="0 0 200">
                           <path
@@ -105,6 +106,7 @@ const Projects = () => {
                         href={project.deployed}
                         target="_blank"
                         rel="noreferrer"
+                        aria-label="deployedProject"
                       >
                         <LinkIcon />
                       </a>
