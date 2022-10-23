@@ -1,16 +1,4 @@
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Divider,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 
 const Career = () => {
   const bgColor = useColorModeValue("gray.50", "blackAlpha.800");
@@ -48,12 +36,13 @@ const Career = () => {
   return (
     <Flex
       w="100vw"
-      h={["100%"]}
+      h={["100vh"]}
       px={[0, 0, 10, 40]}
       bg={bgColor}
       display={["block", "block", "flex", "flex"]}
       justifyContent="flex-end"
       // border="1px solid red"
+      pt={20}
     >
       <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
         <Heading fontSize={["20px"]} fontWeight="700" letterSpacing={0.4}>
@@ -72,7 +61,7 @@ const Career = () => {
             {jobs.map((job, i) => {
               return (
                 <>
-                  <Box key={i} mb={20}>
+                  <Box key={i} mb={10}>
                     <Heading
                       transform="scaleY(.9)"
                       fontSize={["18px"]}
@@ -88,9 +77,9 @@ const Career = () => {
                       flexDir="column"
                       justifyContent="space-between"
                       alignItems="flex-end"
-                      fontWeight="500"
+                      fontWeight="300"
                       textAlign="left"
-                      mt={5}
+                      pt={5}
                     >
                       <Text transform="scaleY(.9)">{job.year}</Text>
                       <Box pt={10} textAlign="end">
