@@ -3,11 +3,9 @@ import {
   Box,
   Heading,
   Text,
-  Divider,
   useColorModeValue,
   Tag,
 } from "@chakra-ui/react";
-import Head from "next/head";
 
 const Skills = () => {
   const frontEnd = [
@@ -138,10 +136,9 @@ const Skills = () => {
       bg={bgColor}
       display={["block", "block", "flex", "flex"]}
       justifyContent="flex-end"
-      // border="1px solid yellow"
-      pt={20}
+      py={20}
     >
-      <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]} >
+      <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
         <Heading fontSize={["20px"]} fontWeight="700" letterSpacing={0.4}>
           skills
         </Heading>
@@ -153,13 +150,12 @@ const Skills = () => {
         fontWeight="600"
         px={[5, 5, 0]}
       >
-        <Flex display="block" mb={10}>
+        <Flex display="block" pb={"60px"}>
           <Box w="100%" color="white" mb={3}>
             <Heading
               transform="scaleY(.9)"
               fontSize={["18px"]}
-              fontWeight="400"
-              color="gray.500"
+              color="gray.600"
             >
               front end
             </Heading>
@@ -175,16 +171,15 @@ const Skills = () => {
                         key={i}
                         mr={3}
                         my={3}
-                        color="white"
                         borderRadius="md"
                         bg="none"
                         border=".1px solid #777"
-                        _hover={[{ color: "#777" }]}
                       >
                         <Text
                           transform="scaleY(.8)"
                           transition="0.2s ease-in"
                           fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#777" }]}
                         >
                           {skill.name}
                         </Text>
@@ -197,13 +192,12 @@ const Skills = () => {
           </Box>
         </Flex>
 
-        <Flex display="block" mb={10}>
-          <Box w="100%" color="white" mb={3}>
+        <Flex display="block" pb={"60px"}>
+          <Box w="100%" mb={3}>
             <Heading
               transform="scaleY(.9)"
               fontSize={["18px"]}
-              fontWeight="400"
-              color="gray.500"
+              color="gray.600"
             >
               back end
             </Heading>
@@ -219,16 +213,15 @@ const Skills = () => {
                         key={i}
                         mr={3}
                         my={3}
-                        color="white"
                         borderRadius="md"
                         bg="none"
                         border=".1px solid #777"
-                        _hover={[{ color: "#777" }]}
                       >
                         <Text
                           transform="scaleY(.8)"
                           transition="0.2s ease-in"
                           fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#777" }]}
                         >
                           {skill.name}
                         </Text>
@@ -241,13 +234,12 @@ const Skills = () => {
           </Box>
         </Flex>
 
-        <Flex display="block" mb={10}>
+        <Flex display="block" pb={"60px"}>
           <Box w="100%" color="white" mb={3}>
             <Heading
               transform="scaleY(.8)"
               fontSize={["18px"]}
-              fontWeight="400"
-              color="gray.500"
+              color="gray.600"
             >
               management tools - methodologies
             </Heading>
@@ -263,16 +255,15 @@ const Skills = () => {
                         key={i}
                         mr={3}
                         my={3}
-                        color="white"
                         borderRadius="md"
                         bg="none"
                         border=".1px solid #777"
-                        _hover={[{ color: "#777" }]}
                       >
                         <Text
                           transform="scaleY(.9)"
                           transition="0.2s ease-in"
                           fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#777" }]}
                         >
                           {skill.name}
                         </Text>

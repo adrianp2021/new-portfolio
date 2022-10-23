@@ -6,7 +6,8 @@ import { Flex, Box, Text, useColorModeValue } from "@chakra-ui/react";
 
 import Navbar from "../Components/Layout/Navbar";
 import Career from "../Components/Sections/career";
-import SkillsSet from "../Components/Sections/skills";
+import Skills from "../Components/Sections/skills";
+import Projects from "../Components/Sections/projects";
 
 export default function Home() {
   const bgColor = useColorModeValue("gray.50", "blackAlpha.800");
@@ -62,7 +63,8 @@ export default function Home() {
       </Flex>
 
       <Career />
-      <SkillsSet/>
+      <Skills />
+      <Projects />
     </Box>
   );
 }

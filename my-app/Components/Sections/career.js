@@ -61,12 +61,11 @@ const Career = () => {
             {jobs.map((job, i) => {
               return (
                 <>
-                  <Box key={i} mb={10}>
+                  <Box key={i} pb={"60px"}>
                     <Heading
                       transform="scaleY(.9)"
                       fontSize={["18px"]}
-                      fontWeight="400"
-                      color="gray.500"
+                      color="gray.600"
                     >
                       {job.name}
                     </Heading>
@@ -90,7 +89,6 @@ const Career = () => {
                       </Box>
                     </Box>
                   </Box>
-                  {/* <Divider my={10} borderColor="gray.500"/> */}
                 </>
               );
             })}
