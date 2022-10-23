@@ -25,7 +25,7 @@ const Navbar = () => {
       h={20}
     >
       <Box
-        border="1px solid purple"
+        // border="1px solid purple"
         w="100%"
         display="flex"
         justifyContent="space-between"
