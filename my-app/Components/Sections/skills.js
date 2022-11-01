@@ -5,6 +5,8 @@ import {
   Text,
   useColorModeValue,
   Tag,
+  List,
+  ListItem,
 } from "@chakra-ui/react";
 
 const Skills = () => {
@@ -162,13 +164,13 @@ const Skills = () => {
           </Box>
 
           <Box fontWeight="500">
-            <Box>
-              {frontEnd.map((skill, i) => {
-                return (
-                  <>
-                    <a href={skill.link} target="_blank" rel="noreferrer">
+            <List>
+              {frontEnd.map((value, i) => {
+                // return (
+                <>
+                  <ListItem key={i}>
+                    <a href={value.link} target="_blank" rel="noreferrer">
                       <Tag
-                        key={i}
                         mr={3}
                         my={3}
                         borderRadius="md"
@@ -181,14 +183,15 @@ const Skills = () => {
                           fontFamily="Red Hat Text, sans-serif"
                           _hover={[{ color: "#777" }]}
                         >
-                          {skill.name}
+                          {value.name}
                         </Text>
                       </Tag>
                     </a>
-                  </>
-                );
+                  </ListItem>
+                </>;
+                // );
               })}
-            </Box>
+            </List>
           </Box>
         </Flex>
 
@@ -204,33 +207,35 @@ const Skills = () => {
           </Box>
 
           <Box fontWeight="500">
-            <Box>
+            <List>
               {backEnd.map((skill, i) => {
-                return (
-                  <>
-                    <a href={skill.link} target="_blank" rel="noreferrer">
-                      <Tag
-                        key={i}
-                        mr={3}
-                        my={3}
-                        borderRadius="md"
-                        bg="none"
-                        border=".1px solid #777"
+                // return (
+                <>
+                  <ListItem key={i} />
+                  <a href={skill.link} target="_blank" rel="noreferrer">
+                    <Tag
+                      key={i}
+                      mr={3}
+                      my={3}
+                      borderRadius="md"
+                      bg="none"
+                      border=".1px solid #777"
+                    >
+                      <Text
+                        transform="scaleY(.8)"
+                        transition="0.2s ease-in"
+                        fontFamily="Red Hat Text, sans-serif"
+                        _hover={[{ color: "#777" }]}
                       >
-                        <Text
-                          transform="scaleY(.8)"
-                          transition="0.2s ease-in"
-                          fontFamily="Red Hat Text, sans-serif"
-                          _hover={[{ color: "#777" }]}
-                        >
-                          {skill.name}
-                        </Text>
-                      </Tag>
-                    </a>
-                  </>
-                );
+                        {skill.name}
+                      </Text>
+                    </Tag>
+                  </a>
+                  <ListItem />
+                </>;
+                // );
               })}
-            </Box>
+            </List>
           </Box>
         </Flex>
 
@@ -246,10 +251,11 @@ const Skills = () => {
           </Box>
 
           <Box fontWeight="500">
-            <Box>
+            <List>
               {management.map((skill, i) => {
-                return (
-                  <>
+                // return (
+                <>
+                  <ListItem key={i}>
                     <a href={skill.link} target="_blank" rel="noreferrer">
                       <Tag
                         key={i}
@@ -269,10 +275,11 @@ const Skills = () => {
                         </Text>
                       </Tag>
                     </a>
-                  </>
-                );
+                  </ListItem>
+                </>;
+                // );
               })}
-            </Box>
+            </List>
           </Box>
         </Flex>
       </Box>

@@ -5,6 +5,8 @@ import {
   Text,
   useColorModeValue,
   Divider,
+  List,
+  ListItem
 } from "@chakra-ui/react";
 
 const Career = () => {
@@ -64,11 +66,11 @@ const Career = () => {
         px={[5, 5, 0]}
       >
         <Flex display="block" h="100%">
-          <Box>
+          <List>
             {jobs.map((job, i) => {
-              return (
+              // return (
                 <>
-                  <Box key={i}>
+                  <ListItem key={i}>
                     <Box
                       display={["block", "block", "flex", "flex"]}
                       justifyContent="space-between"
@@ -80,7 +82,7 @@ const Career = () => {
                       >
                         {job.name}
                       </Heading>
-                      <Text transform="scaleY(.8)" textAlign="end">
+                      <Text transform="scaleY(.8)" textAlign={["start", "end"]}>
                         {job.year}
                       </Text>
                     </Box>
@@ -90,13 +92,12 @@ const Career = () => {
                         <Text textAlign="end">{job.role}</Text>
                       </Box>
                     </Box>
-                  </Box>
-
+                  </ListItem>
                   <Divider my={10} />
                 </>
-              );
+              // );
             })}
-          </Box>
+          </List>
         </Flex>
       </Box>
     </Flex>
