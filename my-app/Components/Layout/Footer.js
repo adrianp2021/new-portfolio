@@ -1,4 +1,4 @@
-import { Divider, Box, Heading, Text } from "@chakra-ui/react";
+import { Divider, Box, Heading, Text, List, ListItem } from "@chakra-ui/react";
 
 const Footer = () => {
   const socialMedia = [
@@ -35,12 +35,13 @@ const Footer = () => {
           </Box>
 
           <Box w={["100%", "100%", "50%", "50%"]}>
-            <Box mb={5}>
-              {socialMedia.map((social, key) => {
+            {/* <Box mb={5}>
+              {socialMedia.map((social, index) => {
                 return (
                   <>
-                    <Box key={key}>
-                      <a href={social.link} target="_blank" rel="noreferrer">
+                    <Box key={index}>
+                    <List key={index}>
+                      <ListItem href={social.link} target="_blank" rel="noreferrer">
                         <Text
                           transform="scaleY(.9)"
                           transition="0.2s ease-in"
@@ -48,17 +49,38 @@ const Footer = () => {
                           fontFamily="Red Hat Text, sans-serif"
                           letterSpacing={0.4}
                           fontSize={["16px"]}
-                          fontWeight="700"
                           mb={2}
                         >
                           {social.name}
                         </Text>
-                      </a>
+                      </ListItem>
+                    </List>
                     </Box>
                   </>
                 );
               })}
-            </Box>
+            </Box> */}
+
+            <List>
+              {socialMedia.map((value, id) => (
+                <ListItem key={id}>
+                  <a href={value.link} target="_blank" rel="noreferrer">
+                    <Text
+                      transform="scaleY(.9)"
+                      transition="0.2s ease-in"
+                      _hover={[{ color: "#777" }]}
+                      fontFamily="Red Hat Text, sans-serif"
+                      letterSpacing={0.4}
+                      fontSize={["16px"]}
+                      mb={2}
+                    >
+                      {value.name}
+                    </Text>
+                  </a>
+                </ListItem>
+              ))}
+            </List>
+
             <Box mt={5} display="block">
               <Divider />
               <Text

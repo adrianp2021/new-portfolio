@@ -136,7 +136,7 @@ const Skills = () => {
       bg={bgColor}
       display={["block", "block", "flex", "flex"]}
       justifyContent="flex-end"
-      py={20}
+      pt={20}
     >
       <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
         <Heading fontSize={["20px"]} fontWeight="700" letterSpacing={0.4}>

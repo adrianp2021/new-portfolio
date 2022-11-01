@@ -1,4 +1,11 @@
-import { Flex, Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Heading,
+  Text,
+  useColorModeValue,
+  Divider,
+} from "@chakra-ui/react";
 
 const Career = () => {
   const bgColor = useColorModeValue("gray.50", "blackAlpha.800");
@@ -61,34 +68,31 @@ const Career = () => {
             {jobs.map((job, i) => {
               return (
                 <>
-                  <Box key={i} pb={"60px"}>
-                    <Heading
-                      transform="scaleY(.9)"
-                      fontSize={["18px"]}
-                      color="gray.600"
-                    >
-                      {job.name}
-                    </Heading>
-
+                  <Box key={i}>
                     <Box
-                      w="100%"
-                      display="flex"
-                      flexDir="column"
+                      display={["block", "block", "flex", "flex"]}
                       justifyContent="space-between"
-                      alignItems="flex-end"
-                      fontWeight="300"
-                      textAlign="left"
-                      pt={5}
                     >
-                      <Text transform="scaleY(.9)">{job.year}</Text>
-                      <Box pt={10} textAlign="end">
-                        <Text transform="scaleY(.9)">{job.location}</Text>
-                        <Text transform="scaleY(.9)" textAlign="end">
-                          {job.role}
-                        </Text>
+                      <Heading
+                        transform="scaleY(.9)"
+                        fontSize={["18px"]}
+                        color="gray.600"
+                      >
+                        {job.name}
+                      </Heading>
+                      <Text transform="scaleY(.8)" textAlign="end">
+                        {job.year}
+                      </Text>
+                    </Box>
+                    <Box w="100%">
+                      <Box textAlign="end" transform="scaleY(.8)" my={10}>
+                        <Text>{job.location}</Text>
+                        <Text textAlign="end">{job.role}</Text>
                       </Box>
                     </Box>
                   </Box>
+
+                  <Divider my={10} />
                 </>
               );
             })}
