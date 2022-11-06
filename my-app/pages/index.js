@@ -19,7 +19,7 @@ export default function Home() {
 
       <Navbar />
 
-      <Flex w="100vw" h={["100vh"]} px={[0, 0, 10, 40]} bg={bgColor} >
+      <Flex w="100vw" h={["100vh"]} px={[0, 0, 10, 40]} bg={bgColor}>
         <Box
           w="100%"
           display="flex"
@@ -39,19 +39,24 @@ export default function Home() {
             <Text
               fontSize={["30px", "35px", "40px"]}
               fontFamily="Red Hat Text, sans-serif"
-              transform="scaleY(.9)"
-              lineHeight={1.3}
+              // transform="scaleY(.9)"
+              lineHeight={1.1}
               fontWeight="900"
-              my={7}
+              my={10}
             >
-              My name is Adrian. I am a Software Engineer <br /> based in
-              London, UK.
+              Hello, my name is Adrian Pantea. I curate <br />
+              vision with simple code.
             </Text>
 
-            <Text color="gray.500">
-              I’m a Software Engineer and Tech enthusiast who enjoys
-              turning problems and <br /> opportunities into simple interfaces
-              through design and code.
+            <Text 
+            // color="gray.600" 
+            fontWeight="400" 
+            letterSpacing={0.1} 
+            lineHeight={1.4}
+            >
+              I’m a Software Engineer and Tech enthusiast who enjoys turning
+              problems and  opportunities <br /> into simple interfaces through
+              design and code.
             </Text>
           </Box>
           {/* <Box w={["100%", "100%", "50%"]} textAlign="end" fontWeight="500">

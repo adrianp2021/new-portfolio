@@ -6,7 +6,10 @@ import {
   useColorModeValue,
   IconButton,
 } from "@chakra-ui/react";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+// import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+
+import {BsMoon} from 'react-icons/bs'
+import {WiDaySunny} from 'react-icons/wi'
 
 const Navbar = () => {
   // const formBackground = useColorModeValue("gray.300", "gray.900");
@@ -36,7 +39,7 @@ const Navbar = () => {
           This is the Navbar
         </Heading>
         <IconButton
-          icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+          icon={colorMode === "dark" ? <WiDaySunny /> : <BsMoon />}
           onClick={toggleColorMode}
         />
         {/* <Button onClick={toggleColorMode}>Change bg</Button> */}

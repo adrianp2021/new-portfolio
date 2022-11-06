@@ -51,7 +51,7 @@ function Contact() {
     <form action="submit" method="POST" onSubmit={handleOnSubmit}>
       <Stack>
         <FormControl id="name" isRequired>
-          <FormLabel>Name:</FormLabel>
+          <FormLabel >Name:</FormLabel>
           <Input
             type="text"
             value={name}
@@ -60,6 +60,7 @@ function Contact() {
             }}
             // _placeholder={{ color: "gray.600" }}
             focusBorderColor="inherit"
+            
           />
         </FormControl>
         <FormControl id="email" isRequired>

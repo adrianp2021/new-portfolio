@@ -128,17 +128,18 @@ const Skills = () => {
     },
   ];
 
-  const bgColor = useColorModeValue("gray.50", "blackAlpha.800");
+  const bgColor = useColorModeValue("gray.50", "#19191C");
 
   return (
     <Box
       w="100vw"
-      h={["100%"]}
+      h={["100vh"]}
       px={[0, 0, 10, 40]}
       bg={bgColor}
       display={["block", "block", "flex", "flex"]}
       justifyContent="flex-end"
       pt={20}
+      // border=".1px solid red"
     >
       <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
         <Heading fontSize={["20px"]} fontWeight="700" letterSpacing={0.4}>
@@ -152,55 +153,53 @@ const Skills = () => {
         fontWeight="600"
         px={[5, 5, 0]}
       >
-        <Flex display="block" pb={"60px"}>
+        <Flex display="block" p={5}>
           <Box w="100%" color="white" mb={3}>
             <Heading
-              transform="scaleY(.9)"
-              fontSize={["18px"]}
-              color="gray.600"
+              color="gray.500"
+              letterSpacing="wide"
+              fontSize="sm"
+              textTransform="uppercase"
             >
               front end
             </Heading>
           </Box>
 
           <Box fontWeight="500">
-            <List>
+            <Box>
               {frontEnd.map((value, i) => {
-                // return (
-                <>
-                  <ListItem key={i}>
-                    <a href={value.link} target="_blank" rel="noreferrer">
-                      <Tag
-                        mr={3}
-                        my={3}
-                        borderRadius="md"
-                        bg="none"
-                        border=".1px solid #777"
+                return (
+                  <a href={value.link} target="_blank" rel="noreferrer" key={i}>
+                    <Tag
+                      mr={3}
+                      my={3}
+                      borderRadius="md"
+                      bg="none"
+                      border=".1px solid #777"
+                    >
+                      <Text
+                        transform="scaleY(.9)"
+                        transition="0.2s ease-in"
+                        fontFamily="Red Hat Text, sans-serif"
+                        _hover={[{ color: "#777" }]}
                       >
-                        <Text
-                          transform="scaleY(.8)"
-                          transition="0.2s ease-in"
-                          fontFamily="Red Hat Text, sans-serif"
-                          _hover={[{ color: "#777" }]}
-                        >
-                          {value.name}
-                        </Text>
-                      </Tag>
-                    </a>
-                  </ListItem>
-                </>;
-                // );
+                        {value.name}
+                      </Text>
+                    </Tag>
+                  </a>
+                );
               })}
-            </List>
+            </Box>
           </Box>
         </Flex>
 
-        <Flex display="block" pb={"60px"}>
+        <Flex display="block" py={10} p={5}>
           <Box w="100%" mb={3}>
             <Heading
-              transform="scaleY(.9)"
-              fontSize={["18px"]}
-              color="gray.600"
+              color="gray.500"
+              letterSpacing="wide"
+              fontSize="sm"
+              textTransform="uppercase"
             >
               back end
             </Heading>
@@ -209,10 +208,8 @@ const Skills = () => {
           <Box fontWeight="500">
             <List>
               {backEnd.map((skill, i) => {
-                // return (
-                <>
-                  <ListItem key={i} />
-                  <a href={skill.link} target="_blank" rel="noreferrer">
+                return (
+                  <a href={skill.link} target="_blank" rel="noreferrer" key={i}>
                     <Tag
                       key={i}
                       mr={3}
@@ -222,7 +219,7 @@ const Skills = () => {
                       border=".1px solid #777"
                     >
                       <Text
-                        transform="scaleY(.8)"
+                        transform="scaleY(.9)"
                         transition="0.2s ease-in"
                         fontFamily="Red Hat Text, sans-serif"
                         _hover={[{ color: "#777" }]}
@@ -231,20 +228,19 @@ const Skills = () => {
                       </Text>
                     </Tag>
                   </a>
-                  <ListItem />
-                </>;
-                // );
+                );
               })}
             </List>
           </Box>
         </Flex>
 
-        <Flex display="block" pb={"60px"}>
+        <Flex display="block" pb={"60px"} p={5}>
           <Box w="100%" color="white" mb={3}>
             <Heading
-              transform="scaleY(.8)"
-              fontSize={["18px"]}
-              color="gray.600"
+              color="gray.500"
+              letterSpacing="wide"
+              fontSize="sm"
+              textTransform="uppercase"
             >
               management tools - methodologies
             </Heading>
@@ -253,31 +249,26 @@ const Skills = () => {
           <Box fontWeight="500">
             <List>
               {management.map((skill, i) => {
-                // return (
-                <>
-                  <ListItem key={i}>
-                    <a href={skill.link} target="_blank" rel="noreferrer">
-                      <Tag
-                        key={i}
-                        mr={3}
-                        my={3}
-                        borderRadius="md"
-                        bg="none"
-                        border=".1px solid #777"
+                return (
+                  <a href={skill.link} target="_blank" rel="noreferrer" key={i}>
+                    <Tag
+                      mr={3}
+                      my={3}
+                      borderRadius="md"
+                      bg="none"
+                      border=".1px solid #777"
+                    >
+                      <Text
+                        transform="scaleY(.9)"
+                        transition="0.2s ease-in"
+                        fontFamily="Red Hat Text, sans-serif"
+                        _hover={[{ color: "#777" }]}
                       >
-                        <Text
-                          transform="scaleY(.9)"
-                          transition="0.2s ease-in"
-                          fontFamily="Red Hat Text, sans-serif"
-                          _hover={[{ color: "#777" }]}
-                        >
-                          {skill.name}
-                        </Text>
-                      </Tag>
-                    </a>
-                  </ListItem>
-                </>;
-                // );
+                        {skill.name}
+                      </Text>
+                    </Tag>
+                  </a>
+                );
               })}
             </List>
           </Box>

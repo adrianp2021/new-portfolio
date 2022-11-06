@@ -302,7 +302,14 @@ function Contact() {
           <form action="submit" method="POST" onSubmit={handleOnSubmit}>
             <Stack>
               <FormControl isRequired>
-                <FormLabel>Name:</FormLabel>
+                <FormLabel
+                  color="gray.500"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                >
+                  Name
+                </FormLabel>
                 <Input
                   type="text"
                   value={name}
@@ -310,17 +317,25 @@ function Contact() {
                     setName(e.target.value);
                   }}
                   name="name"
-                  placeholder="name"
+                  // placeholder="name"
                   focusBorderColor=" inherit"
                   isRequired
                   transform="scaleY(.9)"
                 />
               </FormControl>
               <FormControl isRequired>
-                <FormLabel>Email address:</FormLabel>
+                <FormLabel
+                  color="gray.500"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  mt={5}
+                >
+                  Email address
+                </FormLabel>
                 <Input
                   type="email"
-                  placeholder="john.doe@email.com"
+                  // placeholder="john.doe@email.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -328,9 +343,17 @@ function Contact() {
                 />
               </FormControl>
               <FormControl isRequired>
-                <FormLabel>Message:</FormLabel>
+                <FormLabel
+                  color="gray.500"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  mt={5}
+                >
+                  Message
+                </FormLabel>
                 <Textarea
-                  placeholder="write your message..."
+                  // placeholder="write your message..."
                   value={message}
                   onChange={(e) => {
                     setMessage(e.target.value);
@@ -340,8 +363,8 @@ function Contact() {
               {/* <Button type="submit" isLoading={submitted} loadingText="Submitting">
           SUBMIT
         </Button> */}
-              <Box>
-                <Button borderRadius="md" type="submit" transform="scaleY(.9)">
+              <Box >
+                <Button mt={5} borderRadius="md" type="submit" transform="scaleY(.9)">
                   <Text fontWeight="400">send enquiry</Text>
                 </Button>
               </Box>
