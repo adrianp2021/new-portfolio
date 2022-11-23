@@ -1,11 +1,13 @@
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Box } from "@chakra-ui/react";
 
 const Layout = ({ children }) => {
   return (
-    <Box>
-      {/* <Navbar /> */}
+    <Box
+    // maxW={["100%", "100%", "90%", "80%"]} margin="auto"
+    >
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </Box>

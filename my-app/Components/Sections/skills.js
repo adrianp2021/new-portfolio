@@ -7,6 +7,8 @@ import {
   Tag,
   List,
   ListItem,
+  Stack,
+  VStack,
 } from "@chakra-ui/react";
 
 const Skills = () => {
@@ -129,150 +131,180 @@ const Skills = () => {
   ];
 
   const bgColor = useColorModeValue("gray.50", "#19191C");
+  const iconBackgroundColor = useColorModeValue("#ECF0F6", "#252529");
 
   return (
     <Box
-      w="100vw"
-      h={["100vh"]}
+      h={["100%"]}
       px={[0, 0, 10, 40]}
       bg={bgColor}
       display={["block", "block", "flex", "flex"]}
-      justifyContent="flex-end"
-      pt={20}
-      // border=".1px solid red"
+      justifyContent="center"
+      flexDir="column"
+      pt={40}
     >
-      <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
+      {/* <Box w="40%" display="flex" px={[5, 5, 0]} mb={[10, 10, 0, 0]}>
         <Heading fontSize={["20px"]} fontWeight="700" letterSpacing={0.4}>
           skills
         </Heading>
-      </Box>
+      </Box> */}
+      <Box maxW="1200px" margin="auto">
+        <Box display="flex" px={[5,10, 0]} mb={[10, 10, 0, 0]}>
+          <Heading>Skills</Heading>
+        </Box>
 
-      <Box
-        w={["100%", "100%", "40%"]}
-        textAlign="start"
-        fontWeight="600"
-        px={[5, 5, 0]}
-      >
-        <Flex display="block" p={5}>
-          <Box w="100%" color="white" mb={3}>
-            <Heading
-              color="gray.500"
-              letterSpacing="wide"
-              fontSize="sm"
-              textTransform="uppercase"
-            >
-              front end
-            </Heading>
-          </Box>
-
-          <Box fontWeight="500">
-            <Box>
-              {frontEnd.map((value, i) => {
-                return (
-                  <a href={value.link} target="_blank" rel="noreferrer" key={i}>
-                    <Tag
-                      mr={3}
-                      my={3}
-                      borderRadius="md"
-                      bg="none"
-                      border=".1px solid #777"
-                    >
-                      <Text
-                        transform="scaleY(.9)"
-                        transition="0.2s ease-in"
-                        fontFamily="Red Hat Text, sans-serif"
-                        _hover={[{ color: "#777" }]}
-                      >
-                        {value.name}
-                      </Text>
-                    </Tag>
-                  </a>
-                );
-              })}
+        <Box
+          w={["100%"]}
+          textAlign="start"
+          fontWeight="600"
+          // px={[5, 5, 0]}
+          maxW="1200px"
+          margin="auto"
+          px={[0, 5, 0]}
+          pt={[0, 0, 10]}
+          display={["block", "block", "flex", "flex"]}
+        >
+          <VStack
+            display="block"
+            mt={5}
+            mr={[0, 0, 3]}
+            p={5}
+            w={["100%", "100%", "33.33%"]}
+            _hover={[
+              // { background: iconBackgroundColor },
+              // { cursor: "pointer" },
+              { transition: ".2s ease" },
+            ]}
+            borderRadius="xl"
+          >
+            <Box w="100%" mb={3}>
+              <Heading as="h3" size="sm" fontWeight="600" >
+                Front End
+              </Heading>
             </Box>
-          </Box>
-        </Flex>
 
-        <Flex display="block" py={10} p={5}>
-          <Box w="100%" mb={3}>
-            <Heading
-              color="gray.500"
-              letterSpacing="wide"
-              fontSize="sm"
-              textTransform="uppercase"
-            >
-              back end
-            </Heading>
-          </Box>
-
-          <Box fontWeight="500">
-            <List>
-              {backEnd.map((skill, i) => {
-                return (
-                  <a href={skill.link} target="_blank" rel="noreferrer" key={i}>
-                    <Tag
+            <Box fontWeight="500">
+              <Box>
+                {frontEnd.map((value, i) => {
+                  return (
+                    <a
+                      href={value.link}
+                      target="_blank"
+                      rel="noreferrer"
                       key={i}
-                      mr={3}
-                      my={3}
-                      borderRadius="md"
-                      bg="none"
-                      border=".1px solid #777"
                     >
-                      <Text
-                        transform="scaleY(.9)"
-                        transition="0.2s ease-in"
-                        fontFamily="Red Hat Text, sans-serif"
-                        _hover={[{ color: "#777" }]}
-                      >
-                        {skill.name}
-                      </Text>
-                    </Tag>
-                  </a>
-                );
-              })}
-            </List>
-          </Box>
-        </Flex>
+                      <Tag mr={5} my={3} bg={iconBackgroundColor}>
+                        <Text
+                          transform="scaleY(.9)"
+                          transition="0.2s ease-in"
+                          fontSize="sm"
+                          fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#d4922f" }]}
+                        >
+                          {value.name}
+                        </Text>
+                      </Tag>
+                    </a>
+                  );
+                })}
+              </Box>
+            </Box>
+          </VStack>
 
-        <Flex display="block" pb={"60px"} p={5}>
-          <Box w="100%" color="white" mb={3}>
-            <Heading
-              color="gray.500"
-              letterSpacing="wide"
-              fontSize="sm"
-              textTransform="uppercase"
-            >
-              management tools - methodologies
-            </Heading>
-          </Box>
+          <VStack
+            display="block"
+            mt={5}
+            mr={[0, 0, 3]}
+            p={5}
+            w={["100%", "100%", "33.33%"]}
+            _hover={[
+              // { background: iconBackgroundColor },
+              // { cursor: "pointer" },
+              { transition: ".2s ease" },
+            ]}
+            borderRadius="xl"
+          >
+            <Box w="100%" mb={3}>
+              <Heading as="h3" size="sm" fontWeight="600" >
+                Back End
+              </Heading>
+            </Box>
 
-          <Box fontWeight="500">
-            <List>
-              {management.map((skill, i) => {
-                return (
-                  <a href={skill.link} target="_blank" rel="noreferrer" key={i}>
-                    <Tag
-                      mr={3}
-                      my={3}
-                      borderRadius="md"
-                      bg="none"
-                      border=".1px solid #777"
+            <Box fontWeight="500">
+              <List>
+                {backEnd.map((skill, i) => {
+                  return (
+                    <a
+                      href={skill.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={i}
                     >
-                      <Text
-                        transform="scaleY(.9)"
-                        transition="0.2s ease-in"
-                        fontFamily="Red Hat Text, sans-serif"
-                        _hover={[{ color: "#777" }]}
-                      >
-                        {skill.name}
-                      </Text>
-                    </Tag>
-                  </a>
-                );
-              })}
-            </List>
-          </Box>
-        </Flex>
+                      <Tag mr={5} my={3} bg={iconBackgroundColor}>
+                        <Text
+                          transform="scaleY(.9)"
+                          transition="0.2s ease-in"
+                          fontSize="sm"
+                          fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#d4922f" }]}
+                        >
+                          {skill.name}
+                        </Text>
+                      </Tag>
+                    </a>
+                  );
+                })}
+              </List>
+            </Box>
+          </VStack>
+
+          <VStack
+            display="block"
+            mt={5}
+            mr={[0, 0, 3]}
+            p={5}
+            w={["100%", "100%", "33.33%"]}
+            _hover={[
+              // { background: iconBackgroundColor },
+              // { cursor: "pointer" },
+              { transition: ".2s ease" },
+            ]}
+            borderRadius="xl"
+          >
+            <Box w="100%" mb={3}>
+              <Heading as="h3" size="sm" fontWeight="600" >
+                Management tools - Methodologies
+              </Heading>
+            </Box>
+
+            <Box fontWeight="500">
+              <List>
+                {management.map((skill, i) => {
+                  return (
+                    <a
+                      href={skill.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={i}
+                    >
+                      <Tag mr={5} my={3} bg={iconBackgroundColor}>
+                        <Text
+                          transform="scaleY(.9)"
+                          transition="0.2s ease-in"
+                          fontSize="sm"
+                          fontFamily="Red Hat Text, sans-serif"
+                          _hover={[{ color: "#d4922f" }]}
+                        >
+                          {skill.name}
+                        </Text>
+                      </Tag>
+                    </a>
+                  );
+                })}
+              </List>
+            </Box>
+          </VStack>
+        </Box>
       </Box>
     </Box>
   );

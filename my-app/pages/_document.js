@@ -1,4 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
+// import { styles } from "../styles/home.module.css";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 
 export default function Document() {
   return (
@@ -31,10 +33,10 @@ export default function Document() {
           rel="stylesheet"
         ></link>
       </Head>
-      <body>
+      <Box >
         <Main />
         <NextScript />
-      </body>
+      </Box>
     </Html>
   );
 }

@@ -247,7 +247,8 @@ import {
 } from "@chakra-ui/react";
 
 function Contact() {
-  const bgColor = useColorModeValue("whit", "blackAlpha.800");
+  // const bgColor = useColorModeValue("whit", "blackAlpha.800");
+  const bgColor = useColorModeValue("gray.50", "#19191C");
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -281,10 +282,11 @@ function Contact() {
     });
   }
   // <Box w={["100%", "100%", "40%"]} textAlign="start" px={[5, 5, 0]}>
+  
+  
   return (
     <>
       <Box
-        w="100vw"
         h={["100%"]}
         px={[0, 0, 10, 40]}
         bg={bgColor}
