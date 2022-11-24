@@ -36,6 +36,7 @@ const Navbar = () => {
       h={20}
       // border="1px solid"
       justifyContent="flex-end"
+      opacity=".9"
     >
       <Box
         // border=".1px solid purple"
@@ -56,7 +57,7 @@ const Navbar = () => {
               mx={5}
               fontSize="md"
               fontWeight="700"
-              _hover={[{ color: "#38C397" }]}
+              _hover={[{ opacity: ".6" }]}
             >
               home
             </Link>
@@ -66,7 +67,7 @@ const Navbar = () => {
               mx={5}
               fontSize="md"
               fontWeight="700"
-              _hover={[{ color: "#38C397" }]}
+              _hover={[{ opacity: ".6" }]}
             >
               about
             </Link>
@@ -76,7 +77,7 @@ const Navbar = () => {
               mx={5}
               fontSize="md"
               fontWeight="700"
-              _hover={[{ color: "#38C397" }]}
+              _hover={[{ opacity: ".6" }]}
             >
               contact
             </Link>

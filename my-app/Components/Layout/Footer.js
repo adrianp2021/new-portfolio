@@ -7,7 +7,10 @@ import {
   ListItem,
   useColorModeValue,
   Icon,
+  Link,
 } from "@chakra-ui/react";
+
+import NextLink from "next/link";
 
 import * as ReactIcons from "react-icons";
 import {
@@ -49,159 +52,81 @@ const Footer = () => {
     AiFillTwitterCircle,
   ];
 
-  // const Icon = icons[idx];
-
-  const example = [
-    {
-      name: "eva",
-    },
-    {
-      name: "adam",
-    },
-    {
-      name: "cain",
-    },
-    {
-      name: "abel",
-    },
-  ];
-
   const bgColor = useColorModeValue("gray.50", "#19191C");
 
   return (
     <>
-      <Box px={[0, 0, 10, 40]} h="100%" bg={bgColor}>
-        <Box>
-          <Heading as="h3" size="lg">
-            let&apos;s connect
-          </Heading>
-        </Box>
-
-        <Box h="100px">
-          {/* <List>
-            {socialMedia.map((value, id) => (
-              <ListItem key={id}>
-                <a href={value.link} target="_blank" rel="noreferrer">
-                  <Text
-                    // transform="scaleY(.9)"
-                    transition="0.2s ease-in"
-                    _hover={[{ color: "#777" }]}
-                    fontFamily="Red Hat Text, sans-serif"
-                    letterSpacing={0.4}
-                    // fontSize={["16px"]}
-                    mb={2}
-                  >
-                    {value.name}
-                  </Text>
-                </a>
-              </ListItem>
-            ))}
-          </List> */}
-
-          <List display="flex">
-            {icons.map((value, index) => {
-              const Icon = icons[index];
-
-              return (
-                <ListItem key={index} mr={3}  _hover={[{ color: "#38C397" }, { transition: ".9s ease" },]} >
-                  <a
-                    href="https://www.linkedin.com/feed/"
-                    target="_blank"
-                    rel="noreferrer"
-                    
-                  >
-                    <Icon />
-                  </a>
-                </ListItem>
-              );
-            })}
-          </List>
-
-          {/* {icons.map((value, idx) => (
-            <li key={value.id} className="nav-text">
-              <button
-                className="genre-btn"
-                onClick={() => genreSelectionHandler(value.id)}
+      <Box px={[0, 0, 10, 40]} bg={bgColor}>
+        <Box maxW="1200px" margin="auto" px={[0, 5, 0]}>
+          <Divider />
+          <Box display={["block", "flex"]}>
+            <Box w={["100%"]} pt={5}>
+              <Box
+                fontWeight="500"
+                display={["block", "block", "flex"]}
+                justifyContent="space-between"
+                alignItems="center"
               >
-                <Icon icon={icons[idx]} />
-              </button>
-            </li>
-          ))} */}
-        </Box>
-        {/* <Box w="100%" display={["block", "block", "flex"]} px={[5, 5, 0]}> */}
-        {/* <Box w={["100%", "100%", "50%", "50%"]} display="flex" mb={5}>
-            <Heading
-              fontFamily="Red Hat Text, sans-serif"
-              fontSize={["20px"]}
-              fontWeight="600"
-            >
-              let&apos;s connect
-            </Heading>
-          </Box> */}
+                <Box display={["none", "none", "flex"]}>
+                  <NextLink href="/" passHref>
+                    <Link mr={5} _hover={[{ opacity: ".6" }]}>
+                      home
+                    </Link>
+                  </NextLink>
+                  <NextLink href="/about" passHref>
+                    <Link mr={5} _hover={[{ opacity: ".6" }]}>
+                      about
+                    </Link>
+                  </NextLink>
+                  <NextLink href="/contact" passHref>
+                    <Link mr={5} _hover={[{ opacity: ".6" }]}>
+                      contact
+                    </Link>
+                  </NextLink>
+                </Box>
 
-        {/* <Box w={["100%", "100%", "50%", "50%"]}> */}
-        {/* <Box mb={5}>
-              {socialMedia.map((social, index) => {
-                return (
-                  <>
-                    <Box key={index}>
-                    <List key={index}>
-                      <ListItem href={social.link} target="_blank" rel="noreferrer">
-                        <Text
-                          transform="scaleY(.9)"
-                          transition="0.2s ease-in"
-                          _hover={[{ color: "#777" }]}
-                          fontFamily="Red Hat Text, sans-serif"
-                          letterSpacing={0.4}
-                          fontSize={["16px"]}
-                          mb={2}
+                <Box>
+                  <List display="flex" justifyContent={["center", "none"]}>
+                    {icons.map((value, index) => {
+                      const Icon = icons[index];
+
+                      return (
+                        <ListItem
+                          key={index}
+                          ml={5}
+                          color="#7A7171"
+                          _hover={[
+                            { color: "#38C397" },
+                            { transition: ".9s ease" },
+                            { opacity: "1" },
+                          ]}
                         >
-                          {social.name}
-                        </Text>
-                      </ListItem>
-                    </List>
-                    </Box>
-                  </>
-                );
-              })}
-            </Box> */}
-
-        {/* <List>
-              {socialMedia.map((value, id) => (
-                <ListItem key={id}>
-                  <a href={value.link} target="_blank" rel="noreferrer">
-                    <Text
-                      transform="scaleY(.9)"
-                      transition="0.2s ease-in"
-                      _hover={[{ color: "#777" }]}
-                      fontFamily="Red Hat Text, sans-serif"
-                      letterSpacing={0.4}
-                      fontSize={["16px"]}
-                      mb={2}
-                    >
-                      {value.name}
-                    </Text>
-                  </a>
-                </ListItem>
-              ))}
-            </List> */}
-
-        {/* <Box mt={5} display="block">
-              <Divider />
-              <Text
-                transform="scaleY(.9)"
-                fontFamily="Red Hat Text, sans-serif"
-                letterSpacing={0.4}
-                color="#777"
-                fontSize={["14px"]}
-                fontWeight="600"
-                py={2}
+                          <a
+                            href="https://www.linkedin.com/feed/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Icon fontSize="20px" />
+                          </a>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
+                </Box>
+              </Box>
+              <Box
+                textAlign={["center", "center", "end"]}
+                color="#7A7171"
+                py={5}
               >
-                ⓒ Copyright {new Date().getFullYear()}
-              </Text>
-            </Box> */}
-        {/* </Box>
-        </Box> */}
+                <Text as="span" fontSize="14px" letterSpacing={0.8}>
+                  ⓒ {new Date().getFullYear()} Adrian Pantea. All rights
+                  reserved.
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </>
   );

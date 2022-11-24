@@ -247,14 +247,7 @@ function Contact() {
               </form>
             </Box>
 
-            <Box
-              w={["100%", "100%", "40%"]}
-
-              px={[5, 5, 0]}
-
-              mt={[20, 20]}
-
-            >
+            <Box w={["100%", "100%", "40%"]} px={[5, 5, 0]} mt={[20, 20]}>
               <Heading size="md">Let's connect </Heading>
               <List display="block">
                 {socialMedia.map((value, index) => {
@@ -276,7 +269,7 @@ function Contact() {
                     >
                       <a target="_blank" rel="noreferrer" href={value.link}>
                         <Flex alignItems="center">
-                          <Icon opacity=".6"/>
+                          <Icon opacity=".6" fontSize="20px" />
                           <Text ml={3}> {value.name}</Text>
                         </Flex>
                       </a>
