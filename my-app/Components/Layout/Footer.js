@@ -60,9 +60,9 @@ const Footer = () => {
         <Box maxW="1200px" margin="auto" px={[0, 5, 0]}>
           <Divider />
           <Box display={["block", "flex"]}>
-            <Box w={["100%"]} pt={5}>
+            <Box w={["100%"]} py={3}>
               <Box
-                fontWeight="500"
+                fontWeight="400"
                 display={["block", "block", "flex"]}
                 justifyContent="space-between"
                 alignItems="center"
@@ -85,6 +85,7 @@ const Footer = () => {
                   </NextLink>
                 </Box>
 
+                {/* <Box> */}
                 <Box>
                   <List display="flex" justifyContent={["center", "none"]}>
                     {icons.map((value, index) => {
@@ -106,23 +107,24 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <Icon fontSize="20px" />
+                            <Icon fontSize="18px" />
                           </a>
                         </ListItem>
                       );
                     })}
                   </List>
                 </Box>
-              </Box>
-              <Box
-                textAlign={["center", "center", "end"]}
-                color="#7A7171"
-                py={5}
-              >
-                <Text as="span" fontSize="14px" letterSpacing={0.8}>
-                  ⓒ {new Date().getFullYear()} Adrian Pantea. All rights
-                  reserved.
-                </Text>
+
+                <Box
+                  textAlign={["center", "center", "end"]}
+                  color="#7A7171"
+                  mt={1}
+                >
+                  <Text as="span" fontSize="12px" letterSpacing={0.8}>
+                    ⓒ {new Date().getFullYear()} Adrian Pantea. All rights
+                    reserved.
+                  </Text>
+                </Box>
               </Box>
             </Box>
           </Box>

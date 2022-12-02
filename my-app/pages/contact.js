@@ -144,7 +144,10 @@ function Contact() {
               other, let's get in touch.{" "}
             </Text>
           </Box>
-          <Box display={["block", "flex"]} justifyContent="space-between">
+          <Box
+            display={["block", "block", "flex"]}
+            justifyContent="space-between"
+          >
             <Box
               w={["100%", "100%", "40%"]}
               textAlign="start"
@@ -155,7 +158,11 @@ function Contact() {
               <form action="submit" method="POST" onSubmit={handleOnSubmit}>
                 <Stack>
                   <FormControl isRequired>
-                    <FormLabel opacity=".6" letterSpacing="wide" fontSize="sm">
+                    <FormLabel
+                      color="#7A7171"
+                      letterSpacing="wide"
+                      fontSize="sm"
+                    >
                       Name
                     </FormLabel>
                     <Input
@@ -173,7 +180,7 @@ function Contact() {
                   </FormControl>
                   <FormControl isRequired>
                     <FormLabel
-                      opacity=".6"
+                      color="#7A7171"
                       letterSpacing="wide"
                       fontSize="sm"
                       mt={5}
@@ -194,7 +201,7 @@ function Contact() {
                   </FormControl>
                   <FormControl isRequired>
                     <FormLabel
-                      opacity=".6"
+                      color="#7A7171"
                       letterSpacing="wide"
                       fontSize="sm"
                       mt={5}
@@ -218,6 +225,7 @@ function Contact() {
                       mt={5}
                       borderRadius="md"
                       type="submit"
+                      color="#7A7171"
                       // transform="scaleY(.9)"
                     >
                       <Text>Send </Text>
@@ -269,8 +277,11 @@ function Contact() {
                     >
                       <a target="_blank" rel="noreferrer" href={value.link}>
                         <Flex alignItems="center">
-                          <Icon opacity=".6" fontSize="20px" />
-                          <Text ml={3}> {value.name}</Text>
+                          <Icon opacity=".6" fontSize="18px" />
+                          <Text ml={3} fontSize="15px">
+                            {" "}
+                            {value.name}
+                          </Text>
                         </Flex>
                       </a>
                     </ListItem>

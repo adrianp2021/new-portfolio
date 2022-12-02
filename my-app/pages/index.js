@@ -20,6 +20,8 @@ export default function Home() {
     <Box>
       <Head>
         <title>Adrian Pantea Portfolio</title>
+        <link rel="shortcut icon" href="http://www.example.com/myicon.ico"/>
+        
       </Head>
 
       {/* <Navbar /> */}
@@ -56,7 +58,8 @@ export default function Home() {
             </Text>
 
             <Text
-              color="rgb(82 82 91)"
+              // color="rgb(82 82 91)"
+              color="gray"
               fontWeight="400"
               letterSpacing={0.2}
               lineHeight={1.4}

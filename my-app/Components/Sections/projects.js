@@ -145,12 +145,15 @@ const Projects = () => {
                   </Flex>
 
                   <Box
-                    p={5}
-                    borderTopRadius="md"
-                    bg="#0C0F13"
-                    display="flex"
+                  py={5}
+                    borderRadius="md"
+                    // bg="#0C0F13"
+                    // h="100%"
+                    display="block"
                     fontSize="13px"
-                    fontWeight="500"
+                    letterSpacing={0.9}
+                    // fontWeight="550"
+                    bg={iconBackgroundColor}
                     color="#61616C"
                     // color="green.500"
                     fontFamily="Red Hat Text, sans-serif"
@@ -159,50 +162,52 @@ const Projects = () => {
                       { cursor: "pointer" },
                       { transition: ".2s ease" },
                     ]}
-                    // border="1px solid"
+                    // border=".1px solid"
+                    // border={["none", ".001px solid  rgba(63,63,70,.4)"]}
                   >
-                    <Box>
-                      <Divider
-                        orientation="vertical"
-                        borderWidth="100%"
-                        // borderColor="green.500"
-                      />
-                    </Box>
+                    <Flex p={5}>
+                      <Box>
+                        <Divider
+                          orientation="vertical"
+                          borderWidth="100%"
+                          // borderColor="green.500"
+                        />
+                      </Box>
 
-                    <Flex flexDirection="column" alignItems="flex-start" ml={3}>
-                      /**
-                      <Flex ml={3} mt={1}>
-                        <Text>* &nbsp; {value.project}</Text>
+                      <Flex
+                        flexDirection="column"
+                        alignItems="flex-start"
+                        ml={3}
+                      >
+                        /**
+                        <Flex ml={3} mt={1}>
+                          <Text>* &nbsp; {value.project}</Text>
+                        </Flex>
+                        <Text ml={3}>* &nbsp; {value.description}</Text>
+                        <Text ml={3}>* &nbsp; {value.tech}</Text>
+                        */
                       </Flex>
-                      <Text ml={3}>* &nbsp; {value.description}</Text>
-                      <Text ml={3}>* &nbsp; {value.tech}</Text>
-                      */
                     </Flex>
+
+                    <Box bg="#d4922f" color="gray.800" >
+                      <a
+                        href={value.deployed}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="deployedProject"
+                      >
+                        <Text ml={4} fontSize="sm">
+                          see project
+                        </Text>
+                      </a>
+                    </Box>
                   </Box>
 
-                  {/* <Box bg="#d4922f" color="gray.800" borderBottomRadius="md">
-                    <a
-                      href={value.deployed}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="deployedProject"
-                    >
-                      <Text ml={4} fontSize="sm">
-                        see project
-                      </Text>
-                    </a>
-                  </Box> */}
-
-                  <Flex
-                    bg="#d4922f"
-                    color="gray.800"
-                    borderBottomRadius="md"
-                    p={2}
-                  >
+                  {/* <Flex borderBottomRadius="md">
                     <Box
                       _hover={[{ color: "#777" }]}
                       transition="0.2s ease-in"
-                      ml={3}
+                      mr={5}
                     >
                       <a
                         href={value.githubRepo}
@@ -213,11 +218,7 @@ const Projects = () => {
                         <AiOutlineGithub />
                       </a>
                     </Box>
-                    <Box
-                      mx={5}
-                      _hover={[{ color: "#777" }]}
-                      transition="0.2s ease-in"
-                    >
+                    <Box _hover={[{ color: "#777" }]} transition="0.2s ease-in">
                       <a
                         href={value.deployed}
                         target="_blank"
@@ -227,7 +228,7 @@ const Projects = () => {
                         <HiOutlineLink />
                       </a>
                     </Box>
-                  </Flex>
+                  </Flex> */}
                 </ListItem>
               );
             })}

@@ -82,10 +82,10 @@ const About = () => {
             </Box>
           </Box>
 
-          <Box w={["80%", "70%", "400px"]} px={[5, 5, 10]} >
+          <Box w={["100%", "70%", "400px"]} px={[5, 5, 10]}>
             <Image
               borderRadius="xl"
-              boxShadow="lg"
+              boxShadow="base"
               alt="me"
               src="https://media-exp1.licdn.com/dms/image/C4E03AQE0CYQmbbTiNw/profile-displayphoto-shrink_800_800/0/1660079360291?e=2147483647&v=beta&t=8G3AnUF6GeE1cIJpzcvXOQKMmHfUzo-PfGRr0D_cI7w"
             />
@@ -94,18 +94,10 @@ const About = () => {
 
               <Stack
                 direction="row"
-                // py={10}
                 justifyContent="flex-start"
                 alignItems="center"
-                // border="1px solid"
                 height={["140px"]}
-                // mt={5}
               >
-                {/* <Divider
-                  orientation="vertical"
-                  px={1}
-                  // mr={[2, 3, 3]}
-                /> */}
                 <Box display="flex" flexDirection="column">
                   <Box py={2.5}>
                     <Heading size="sm">Bachelor of Laws with Honours</Heading>
